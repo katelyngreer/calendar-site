@@ -59,11 +59,10 @@
     }
     .iframe-wrapper {
       width: 100%;
-      overflow: hidden;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     }
     .iframe-wrapper iframe {
-      transform: scale(1);
-      transform-origin: top left;
       width: 1200px;
       height: 600px;
       border: none;
@@ -147,22 +146,12 @@
       transform: rotate(180deg);
     }
 
-    /* Mobile Optimizations */
+    /* Mobile Text Size Adjustments */
     @media (max-width: 768px) {
       .calendar-description { font-size: 1rem; }
-      .iframe-wrapper iframe {
-        transform: scale(0.6);
-        width: 1200px;
-        height: 600px;
-      }
     }
     @media (max-width: 480px) {
       .calendar-description { font-size: 0.85rem; }
-      .iframe-wrapper iframe {
-        transform: scale(0.45);
-        width: 1200px;
-        height: 600px;
-      }
     }
   </style>
 </head>
