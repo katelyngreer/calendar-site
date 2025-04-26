@@ -57,14 +57,24 @@
       line-height: 1.6;
       text-align: justify;
     }
-    iframe {
+
+    /* iframe wrapper */
+    .iframe-wrapper {
       width: 100%;
-      min-height: 600px;
+      overflow: hidden;
+    }
+
+    .iframe-wrapper iframe {
+      transform: scale(1);
+      transform-origin: top left;
+      width: 1200px;
+      height: 600px;
       border: none;
       border-radius: 8px;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
       margin-top: 20px;
     }
+
     .coming-soon {
       text-align: center;
       font-size: 1.4rem;
@@ -141,17 +151,23 @@
       transform: rotate(180deg);
     }
 
-    /* Mobile Optimizations */
+    /* Mobile adjustments: iframe zoom-out! */
     @media (max-width: 768px) {
       header { font-size: 1.5rem; }
       .container { width: 95%; }
       .section { padding: 20px; }
       .calendar-description { font-size: 1rem; }
+      .iframe-wrapper iframe {
+        transform: scale(0.75);
+      }
     }
     @media (max-width: 480px) {
       header { font-size: 1.3rem; }
       .container { width: 90%; }
       .calendar-description { font-size: 0.85rem; }
+      .iframe-wrapper iframe {
+        transform: scale(0.65);
+      }
     }
   </style>
 </head>
@@ -165,14 +181,18 @@
     <div class="calendar-description">
       <p>Below you can view my published calendar. This calendar provides the most up-to-date view of my availability, as it is updated in real time. You can switch the calendar view to day, week, or month by clicking the drop-down menu on the right-hand side below. Please note that any times listed as "free" are due to a system error, and those time slots are unavailable. If you see a time that appears available and is not labeled as "busy" or "free," feel free to inquire about it via email or send me a calendar invite to attempt to secure the time with me. I will then confirm my availability by accepting, declining, or marking the invite as tentative. If the calendar below appears to have no events, please try clearing your browser cache to fix the error. If you experience any other errors on this page or are unable to find a time that works for you, feel free to email me directly for assistance.</p>
     </div>
-    <iframe src="https://outlook.live.com/calendar/0/published/74efdd6b-6a3d-4782-859e-7ad8ca44e114/88f08822-356d-4aa4-b0af-aece9c292d17/cid-D9ADCDA8153366F4/calendar.html/" title="Live Calendar View"></iframe>
+    <div class="iframe-wrapper">
+      <iframe src="https://outlook.live.com/calendar/0/published/74efdd6b-6a3d-4782-859e-7ad8ca44e114/88f08822-356d-4aa4-b0af-aece9c292d17/cid-D9ADCDA8153366F4/calendar.html/" title="Live Calendar View"></iframe>
+    </div>
   </div>
 
   <div class="section dropdown">
     <input type="checkbox" id="booking-checkbox" />
     <label for="booking-checkbox">In-person Booking Page <span class="arrow">&#9660;</span></label>
     <div class="dropdown-content">
-      <iframe src="https://outlook.office365.com/book/Inperson@katelyngreer.ca/" title="In-person Booking Page"></iframe>
+      <div class="iframe-wrapper">
+        <iframe src="https://outlook.office365.com/book/Inperson@katelyngreer.ca/" title="In-person Booking Page"></iframe>
+      </div>
     </div>
   </div>
 
