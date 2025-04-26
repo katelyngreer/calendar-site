@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Existing Connections</title>
+  <link href="https://fonts.googleapis.com/css2?family=CMU+Serif&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'CMU Serif', serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1e2418;
+      color: #333;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #1e2418;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #fffaf4;
+      border-radius: 10px;
+      flex-grow: 1;
+    }
+    .section {
+      margin-bottom: 20px;
+      padding: 25px;
+      background-color: #fffaf4;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #1e2418;
+    }
+    .calendar-description {
+      font-size: 1.1rem;
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin-top: 15px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+    iframe {
+      width: 100%;
+      min-height: 600px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+    .coming-soon {
+      text-align: center;
+      font-size: 1.4rem;
+      color: #333;
+      font-weight: bold;
+      padding: 20px;
+    }
+    .button-container {
+      text-align: center;
+      padding-bottom: 40px;
+    }
+    .button-container a {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #1e2418;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: background-color 0.3s ease;
+    }
+    .button-container a:hover {
+      background-color: #444;
+    }
+    .dropdown {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+    }
+    .dropdown input[type="checkbox"] {
+      display: none;
+    }
+    .dropdown label {
+      cursor: pointer;
+      font-size: 1.4rem;
+      padding: 15px;
+      background-color: #1e2418;
+      color: white;
+      border-radius: 8px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      transition: background-color 0.3s ease;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'CMU Serif', serif;
+    }
+    .dropdown label:hover {
+      background-color: #444;
+    }
+    .dropdown-content {
+      display: none;
+      background-color: #fffaf4;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+      width: 100%;
+      padding: 10px 0;
+    }
+    .dropdown input[type="checkbox"]:checked + label + .dropdown-content {
+      display: block;
+    }
+    .dropdown-content p {
+      margin: 0;
+      padding: 10px 20px;
+    }
+    .dropdown .arrow {
+      transition: transform 0.3s ease;
+    }
+    .dropdown input[type="checkbox"]:checked + label .arrow {
+      transform: rotate(180deg);
+    }
+    @media (max-width: 768px) {
+      header { font-size: 1.5rem; }
+      .container { width: 95%; }
+      .section { padding: 20px; }
+      iframe { min-height: 400px; }
+      .button-container a { padding: 10px 25px; font-size: 1rem; }
+    }
+    @media (max-width: 480px) {
+      header { font-size: 1.3rem; }
+      .container { width: 90%; }
+      iframe { min-height: 300px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Existing Connections</h1>
+</header>
+<div class="container">
+  <div class="section">
+    <h2>Live Calendar View</h2>
+    <div class="calendar-description">
+      <p>Below you can view my published calendar. This calendar provides the most up-to-date view of my availability, as it is updated in real time. You can switch the calendar view to day, week, or month by clicking the drop-down menu on the right-hand side below. Please note that any times listed as "free" are due to a system error, and those time slots are unavailable. If you see a time that appears available and is not labeled as "busy" or "free," feel free to inquire about it via email or send me a calendar invite to attempt to secure the time with me. I will then confirm my availability by accepting, declining, or marking the invite as tentative. If the calendar below appears to have no events, please try clearing your browser cache to fix the error. If you experience any other errors on this page or are unable to find a time that works for you, feel free to email me directly for assistance.</p>
+    </div>
+    <iframe src="https://outlook.live.com/calendar/0/published/74efdd6b-6a3d-4782-859e-7ad8ca44e114/88f08822-356d-4aa4-b0af-aece9c292d17/cid-D9ADCDA8153366F4/calendar.html/" title="Live Calendar View"></iframe>
+  </div>
+
+  <div class="section dropdown">
+    <input type="checkbox" id="booking-checkbox" />
+    <label for="booking-checkbox">In-person Booking Page <span class="arrow">&#9660;</span></label>
+    <div class="dropdown-content">
+      <iframe src="https://outlook.office365.com/book/Inperson@katelyngreer.ca/" title="In-person Booking Page"></iframe>
+    </div>
+  </div>
+
+  <div class="section dropdown">
+    <input type="checkbox" id="contract-checkbox" />
+    <label for="contract-checkbox">Contract Specific Calendars <span class="arrow">&#9660;</span></label>
+    <div class="dropdown-content">
+      <p class="coming-soon">Coming soon!</p>
+    </div>
+  </div>
+
+  <div class="section dropdown">
+    <input type="checkbox" id="service-checkbox" />
+    <label for="service-checkbox">Pay Per Service <span class="arrow">&#9660;</span></label>
+    <div class="dropdown-content">
+      <p class="coming-soon">Coming soon!</p>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <a href="mailto:contact@katelyngreer.ca">Contact Me</a>
+  </div>
+</div>
+</body>
+</html>
