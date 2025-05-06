@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Existing Connections</title>
-  <link href="https://fonts.googleapis.com/css2?family=CMU+Serif&display=swap" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; }
     body {
-      font-family: 'CMU Serif', serif;
+      font-family: serif;
       margin: 0;
       padding: 0;
       background-color: #1e2418;
@@ -29,8 +28,7 @@
       letter-spacing: 1px;
     }
     .container {
-      width: 90%;
-      max-width: 1200px;
+      width: 1024px;
       margin: 40px auto;
       padding: 0 20px;
       background-color: #fffaf4;
@@ -122,7 +120,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-family: 'CMU Serif', serif;
+      font-family: serif;
     }
     .dropdown label:hover {
       background-color: #444;
@@ -148,32 +146,6 @@
     }
     .dropdown input[type="checkbox"]:checked + label .arrow {
       transform: rotate(180deg);
-    }
-
-    /* Mobile: Scrollable iframe + scroll hint */
-    @media (max-width: 768px) {
-      .iframe-inner {
-        overflow-x: auto;
-      }
-      .iframe-inner::after {
-        content: "👈 Swipe";
-        position: absolute;
-        top: 50%;
-        right: 10px;
-        transform: translateY(-50%);
-        font-size: 1.2rem;
-        color: rgba(0, 0, 0, 0.3);
-        pointer-events: none;
-        animation: fadeInOut 2s infinite;
-      }
-    }
-    @keyframes fadeInOut {
-      0%, 100% { opacity: 0.3; }
-      50% { opacity: 1; }
-    }
-
-    @media (max-width: 480px) {
-      .calendar-description { font-size: 0.85rem; }
     }
   </style>
 </head>
