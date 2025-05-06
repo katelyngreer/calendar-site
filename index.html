@@ -26,11 +26,16 @@
       font-size: 2rem;
       font-weight: 500;
       letter-spacing: 1px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
     }
     .container {
       width: 1024px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 0 auto;
+      padding: 120px 20px 40px; /* Top padding prevents overlap with fixed header */
       background-color: #fffaf4;
       border-radius: 10px;
       flex-grow: 1;
@@ -150,55 +155,55 @@
   </style>
 </head>
 <body>
-<header>
-  <h1>Existing Connections</h1>
-</header>
-<div class="container">
+  <header>
+    <h1>Existing Connections</h1>
+  </header>
+  <div class="container">
 
-  <div class="section">
-    <h2>Live Calendar View</h2>
-    <div class="calendar-description">
-      <p>Below you can view my published calendar. This calendar provides the most up-to-date view of my availability, as it is updated in real time. You can switch the calendar view to day, week, or month by clicking the drop-down menu on the right-hand side below. Please note that any times listed as "free" are due to a system error, and those time slots are unavailable. If you see a time that appears available and is not labeled as "busy" or "free," feel free to inquire about it via email or send me a calendar invite to attempt to secure the time with me. I will then confirm my availability by accepting, declining, or marking the invite as tentative. If the calendar below appears to have no events, please try clearing your browser cache to fix the error. If you experience any other errors on this page or are unable to find a time that works for you, feel free to email me directly for assistance.</p>
-    </div>
-    <div class="iframe-wrapper">
-      <div class="iframe-inner">
-        <iframe src="https://outlook.office365.com/calendar/published/13b8587b3e8d4dbfb91be8ecc2547b93@katelyngreer.ca/d69ef08727214872bd455702fc6727fc9773054939053533025/calendar.html" title="Live Calendar View"></iframe>
+    <div class="section">
+      <h2>Live Calendar View</h2>
+      <div class="calendar-description">
+        <p>Below you can view my published calendar. This calendar provides the most up-to-date view of my availability, as it is updated in real time. You can switch the calendar view to day, week, or month by clicking the drop-down menu on the right-hand side below. Please note that any times listed as "free" are due to a system error, and those time slots are unavailable. If you see a time that appears available and is not labeled as "busy" or "free," feel free to inquire about it via email or send me a calendar invite to attempt to secure the time with me. I will then confirm my availability by accepting, declining, or marking the invite as tentative. If the calendar below appears to have no events, please try clearing your browser cache to fix the error. If you experience any other errors on this page or are unable to find a time that works for you, feel free to email me directly for assistance.</p>
       </div>
-    </div>
-  </div>
-
-  <div class="section dropdown">
-    <input type="checkbox" id="booking-checkbox" />
-    <label for="booking-checkbox">In-person Booking Page <span class="arrow">&#9660;</span></label>
-    <div class="dropdown-content">
       <div class="iframe-wrapper">
         <div class="iframe-inner">
-          <iframe src="https://outlook.office365.com/book/Inperson@katelyngreer.ca/" title="In-person Booking Page"></iframe>
+          <iframe src="https://outlook.office365.com/calendar/published/13b8587b3e8d4dbfb91be8ecc2547b93@katelyngreer.ca/d69ef08727214872bd455702fc6727fc9773054939053533025/calendar.html" title="Live Calendar View"></iframe>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="section dropdown">
-    <input type="checkbox" id="contract-checkbox" />
-    <label for="contract-checkbox">Contract Specific Calendars <span class="arrow">&#9660;</span></label>
-    <div class="dropdown-content">
-      <p class="coming-soon">Coming soon!</p>
+    <div class="section dropdown">
+      <input type="checkbox" id="booking-checkbox" />
+      <label for="booking-checkbox">In-person Booking Page <span class="arrow">&#9660;</span></label>
+      <div class="dropdown-content">
+        <div class="iframe-wrapper">
+          <div class="iframe-inner">
+            <iframe src="https://outlook.office365.com/book/Inperson@katelyngreer.ca/" title="In-person Booking Page"></iframe>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="section dropdown">
-    <input type="checkbox" id="service-checkbox" />
-    <label for="service-checkbox">Pay Per Service <span class="arrow">&#9660;</span></label>
-    <div class="dropdown-content">
-      <p class="coming-soon">Coming soon!</p>
+    <div class="section dropdown">
+      <input type="checkbox" id="contract-checkbox" />
+      <label for="contract-checkbox">Contract Specific Calendars <span class="arrow">&#9660;</span></label>
+      <div class="dropdown-content">
+        <p class="coming-soon">Coming soon!</p>
+      </div>
     </div>
-  </div>
 
-  <div class="button-container">
-    <a href="mailto:contact@katelyngreer.ca">Contact Me</a>
-  </div>
+    <div class="section dropdown">
+      <input type="checkbox" id="service-checkbox" />
+      <label for="service-checkbox">Pay Per Service <span class="arrow">&#9660;</span></label>
+      <div class="dropdown-content">
+        <p class="coming-soon">Coming soon!</p>
+      </div>
+    </div>
 
-</div>
+    <div class="button-container">
+      <a href="mailto:contact@katelyngreer.ca">Contact Me</a>
+    </div>
+
+  </div>
 </body>
 </html>
