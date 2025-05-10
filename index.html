@@ -35,7 +35,7 @@
     .container {
       width: 1024px;
       margin: 0 auto;
-      padding: 120px 20px 40px; /* Top padding prevents overlap with fixed header */
+      padding: 120px 20px 40px;
       background-color: #fffaf4;
       border-radius: 10px;
       flex-grow: 1;
@@ -59,6 +59,10 @@
       margin-top: 15px;
       line-height: 1.6;
       text-align: justify;
+    }
+    .calendar-description p:first-of-type {
+      font-size: 23px;
+      font-weight: bold;
     }
     .iframe-wrapper {
       width: 100%;
@@ -145,12 +149,40 @@
     .dropdown-content p {
       margin: 0;
       padding: 10px 20px;
+      font-weight: normal;
     }
     .dropdown .arrow {
       transition: transform 0.3s ease;
     }
     .dropdown input[type="checkbox"]:checked + label .arrow {
       transform: rotate(180deg);
+    }
+    .dropdown label a {
+      color: white;
+      text-decoration: none;
+      flex-grow: 1;
+    }
+    .dropdown label a:hover {
+      text-decoration: underline;
+    }
+
+    /* Custom styling for "How to use published calendar" */
+    #howto-checkbox + label {
+      padding: 6px 12px;
+      font-size: 15px;
+      background-color: #fffaf4;
+      color: #333;
+      border: 1px solid #ddd;
+    }
+    #howto-checkbox + label + .dropdown-content p {
+      padding: 6px 12px;
+      line-height: 1.3;
+      font-size: 15px;
+      font-weight: normal;
+    }
+    #howto-checkbox + label .arrow {
+      color: #1e2418;
+      font-size: 16px;
     }
   </style>
 </head>
@@ -163,8 +195,19 @@
     <div class="section">
       <h2>Live Calendar View</h2>
       <div class="calendar-description">
-        <p>Below you can view my published calendar. This calendar provides the most up-to-date view of my availability, as it is updated in real time. You can switch the calendar view to day, week, or month by clicking the drop-down menu on the right-hand side below. Please note that any times listed as "free" are due to a system error, and those time slots are unavailable. If you see a time that appears available and is not labeled as "busy" or "free," feel free to inquire about it via email or send me a calendar invite to attempt to secure the time with me. I will then confirm my availability by accepting, declining, or marking the invite as tentative. If the calendar below appears to have no events, please try clearing your browser cache to fix the error. If you experience any other errors on this page or are unable to find a time that works for you, feel free to email me directly for assistance.</p>
+        <p><strong>Below you can view my published calendar. This calendar provides the most up-to-date view of my availability, as it is updated in real time.</strong></p>
+
+        <div class="section dropdown">
+          <input type="checkbox" id="howto-checkbox" />
+          <label for="howto-checkbox">How to use published calendar <span class="arrow">&#9660;</span></label>
+          <div class="dropdown-content">
+            <p>
+              You can switch the calendar view to day, week, or month by clicking the drop-down menu on the right-hand side below. Please note that any times listed as "free" are due to a system error, and those time slots are unavailable. If you see a time that appears available and is not labeled as "busy" or "free," feel free to inquire about it via email or send me a calendar invite to attempt to secure the time with me. I will then confirm my availability by accepting, declining, or marking the invite as tentative. If the calendar below appears to have no events, please try clearing your browser cache to fix the error. If you experience any other errors on this page or are unable to find a time that works for you, feel free to email me directly for assistance.
+            </p>
+          </div>
+        </div>
       </div>
+
       <div class="iframe-wrapper">
         <div class="iframe-inner">
           <iframe src="https://outlook.office365.com/calendar/published/13b8587b3e8d4dbfb91be8ecc2547b93@katelyngreer.ca/d69ef08727214872bd455702fc6727fc9773054939053533025/calendar.html" title="Live Calendar View"></iframe>
@@ -172,9 +215,29 @@
       </div>
     </div>
 
+    <!-- Virtual Booking Dropdown -->
+    <div class="section dropdown">
+      <input type="checkbox" id="virtual-booking-checkbox" />
+      <label for="virtual-booking-checkbox">
+        <a href="https://outlook.office365.com/book/VirtualmeetingwithKatelynGreer@katelyngreer.ca/" target="_blank">Virtual Meeting Booking Page</a>
+        <span class="arrow">&#9660;</span>
+      </label>
+      <div class="dropdown-content">
+        <div class="iframe-wrapper">
+          <div class="iframe-inner">
+            <iframe src="https://outlook.office365.com/book/VirtualmeetingwithKatelynGreer@katelyngreer.ca/" title="Virtual Booking Page"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- In-person Booking Dropdown -->
     <div class="section dropdown">
       <input type="checkbox" id="booking-checkbox" />
-      <label for="booking-checkbox">In-person Booking Page <span class="arrow">&#9660;</span></label>
+      <label for="booking-checkbox">
+        <a href="https://outlook.office365.com/book/Inperson@katelyngreer.ca/" target="_blank">In-person Booking Page</a>
+        <span class="arrow">&#9660;</span>
+      </label>
       <div class="dropdown-content">
         <div class="iframe-wrapper">
           <div class="iframe-inner">
