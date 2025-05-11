@@ -61,8 +61,9 @@
       text-align: justify;
     }
     .calendar-description p:first-of-type {
-      font-size: 23px;
+      font-size: clamp(16px, 2.2vw, 23px);
       font-weight: bold;
+      white-space: normal;
     }
     .iframe-wrapper {
       width: 100%;
@@ -165,8 +166,20 @@
     .dropdown label a:hover {
       text-decoration: underline;
     }
+    .dropdown-content .external-link {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .dropdown-content .external-link a {
+      color: #1e2418;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .dropdown-content .external-link a:hover {
+      text-decoration: underline;
+    }
 
-    /* Custom styling for "How to use published calendar" */
+    /* Styling for "How to use published calendar" */
     #howto-checkbox + label {
       padding: 6px 12px;
       font-size: 15px;
@@ -218,11 +231,11 @@
     <!-- Virtual Booking Dropdown -->
     <div class="section dropdown">
       <input type="checkbox" id="virtual-booking-checkbox" />
-      <label for="virtual-booking-checkbox">
-        <a href="https://outlook.office365.com/book/VirtualmeetingwithKatelynGreer@katelyngreer.ca/" target="_blank">Virtual Meeting Booking Page</a>
-        <span class="arrow">&#9660;</span>
-      </label>
+      <label for="virtual-booking-checkbox">Virtual Meeting Booking Page <span class="arrow">&#9660;</span></label>
       <div class="dropdown-content">
+        <div class="external-link">
+          <a href="https://outlook.office365.com/book/VirtualmeetingwithKatelynGreer@katelyngreer.ca/" target="_blank">Open in new window</a>
+        </div>
         <div class="iframe-wrapper">
           <div class="iframe-inner">
             <iframe src="https://outlook.office365.com/book/VirtualmeetingwithKatelynGreer@katelyngreer.ca/" title="Virtual Booking Page"></iframe>
@@ -234,11 +247,11 @@
     <!-- In-person Booking Dropdown -->
     <div class="section dropdown">
       <input type="checkbox" id="booking-checkbox" />
-      <label for="booking-checkbox">
-        <a href="https://outlook.office365.com/book/Inperson@katelyngreer.ca/" target="_blank">In-person Booking Page</a>
-        <span class="arrow">&#9660;</span>
-      </label>
+      <label for="booking-checkbox">In-person Booking Page <span class="arrow">&#9660;</span></label>
       <div class="dropdown-content">
+        <div class="external-link">
+          <a href="https://outlook.office365.com/book/Inperson@katelyngreer.ca/" target="_blank">Open in new window</a>
+        </div>
         <div class="iframe-wrapper">
           <div class="iframe-inner">
             <iframe src="https://outlook.office365.com/book/Inperson@katelyngreer.ca/" title="In-person Booking Page"></iframe>
